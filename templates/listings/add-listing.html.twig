@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<form class="new" action="" method="post" enctype="multipart/form-data">
+    <label for="rentorsale">Rent/sale :</label>
+    <select class="inputform" name="rentorsale" id="rentorsale">
+        <option 
+        {# <?= isset($result) && $result['rentorsale'] === 'rent' ? 'selected' : '' ?>  #}
+        value="rent">Location</option>
+        <option 
+        {# <?= isset($result) && $result['rentorsale'] === 'sale' ? 'selected' : '' ?>  #}
+        value="sale">Vente</option>
+
+    </select>
+    <label for="type">Maison/Appartement :</label>
+    <select class="inputform" name="type" id="inputform">
+        <option 
+        {# <?= isset($result) && $result['annonce_type'] === 'House' ? 'selected' : '' ?>  #}
+        value="house">House</option>
+        <option 
+        {# <?= isset($result) && $result['annonce_type'] === 'Apartement' ? 'selected' : '' ?>  #}
+        value="apartement">Appartement</option>
+    </select>
+    <div>
+    <label for="img">Photo appartement/maison</label>
+    <input class="inputform" type="file" name="img">
+    {# <?php if (isset ($result)): ?> #}
+    <img class="imgformupdate" src="
+    {# ../../<?= $result['appart_src'] ?> #}
+    " alt="">
+    {# <?php endif; ?> #}
+    </div>
+    <div>
+    <label for="src2">Photo quartier</label>
+    <input class="inputform" type="file" name="src2">
+    {# <?php if (isset ($result)): ?> #}
+    <img class="imgformupdate" src="
+    {# ../../<?= $result['quart_src'] ?> #}
+    " alt="">
+    {# <?php endif; ?> #}
+    </div>
+
+
+    <label for="area">Surface</label>
+    <input class="inputform" type="text" name="area" value="
+    {# <?= !isset($result) ? '' :  $result['area_'] ?> #}
+    ">
+    <label for="location">Localisation</label>
+    <input class="inputform" type="text" name="location" value="
+    {# <?= !isset($result) ? '' :  $result['location'] ?> #}
+    ">
+    <label for="price">Prix</label>
+    <input class="inputform" type="text" name="price" value="
+    {# <?= !isset($result) ? '' :  $result['price'] ?> #}
+    ">
+    <label for="description">Description</label>
+    <textarea name="description" id="" cols="30" rows="10">
+    {# <?= !isset($result) ? '' :  $result['description_area'] ?> #}
+    </textarea>
+    {# <?php if (!isset ($result)): ?> #}
+        <button type="submit">Ajouter</button>
+    {# <?php endif; ?>
+    <?php if (isset ($result)): ?> #}
+        {# <button type="submit">Modifier</button> #}
+    {# <?php endif; ?> #}
+    
+    
+</form>
+{% endblock %}

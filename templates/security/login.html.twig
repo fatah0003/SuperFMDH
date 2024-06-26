@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+            {% block importmap %}{{ importmap('login') }}{% endblock %}
+        {% endblock %}
+{% block body %}
+<h1 class="">Connexion</h1>
+    <form class="loginform" method="POST">
+                <div class="inputform">
+                    <label class="inputform" for="email">Email</label>
+                    <input type="text" id="email" name="email" class="inputform" required>
+                </div>
+                <div class="inputform">
+                    <label class="inputform" for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" class="inputform" required>
+                </div>
+                {# <div><a href="../security/signup.php">Créer un compte</a></div> #}
+                
+                {# <?php if (!empty($error)): ?>
+                    <p class=""><?php echo $error; ?></p>
+                    <a href="">mot de passe oublié?</a>
+                <?php endif; ?>  #}
+               
+                <div class="inputform">
+                    <button class="btn" type="submit">
+                        Se connecter
+                    </button>
+                </div>
+            </form>
+            
+{% endblock %}

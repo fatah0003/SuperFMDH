@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+            {% block importmap %}{{ importmap('signup') }}{% endblock %}
+        {% endblock %}
+{% block body %}
+<h1 class="">Creation d'un compte</h1>
+<form class="signupform" method="POST">
+                <div class="inputform">
+                    <label class="inputform" for="email">Email</label>
+                    <input type="text" id="email" name="email" class="inputform" required>
+                </div>
+                <div class="inputform">
+                    <label class="inputform" for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" class="inputform" required>
+                </div>
+               
+                <div class="inputform">
+                    <button class="btn" type="submit">
+                        Creer un compte
+                    </button>
+                </div>
+            </form>
+{% endblock %}

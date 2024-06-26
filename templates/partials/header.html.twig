@@ -1,0 +1,20 @@
+
+<header>
+        <a href="/index.php"> <img class="logo" src="{{ asset('/image/logo-removebg-preview.png')}}" alt="">
+            
+        </a>
+        <nav>
+        <a class="nav" href="./image/b">House</a>
+        <a class="nav" href="">Apartements</a>
+        <a class="nav" href="">My Favorites</a>
+        <a class="nav" href="">Contact</a>
+        {# <?php if (!isset($_SESSION['email'])): ?> #}
+            <a class="btn" href="{{path('log-in')}}">LoGin/SignUp</a>
+        {# <?php else: ?>
+            <a class="nav" href="/listings/new.php">Ajouter une annonce</a>
+            <a class="btn" href="/security/logout.php">LoGout</a>
+            
+        <?php endif; ?> #}
+        
+        </nav>
+    </header>
